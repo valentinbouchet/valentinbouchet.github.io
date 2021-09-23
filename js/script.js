@@ -11,7 +11,3 @@ $(document).on('click', 'a[href^="#"]', function(event) {
 });
   
 window.setTimeout(offsetAnchor, 0);
-
-function test() {
-    window.top
-}
