@@ -333,6 +333,8 @@ body section:nth-of-type(4) h2 {
 body section:nth-of-type(5) {
     min-height: calc(100% - 50px);
     background-color: rgba(209, 213, 219, 1);
+    display: flex;
+    flex-direction: column;
 }
 
 body section:nth-of-type(5) h2 {
@@ -352,11 +354,9 @@ body section:nth-of-type(5) div div div{
 }
 
 #myCarousel {
-    height: auto;
+    height: 100%;
     width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
+    margin: auto;
 }
 
 body section:nth-of-type(6) {
@@ -415,6 +415,10 @@ body section:nth-of-type(6) div:nth-of-type(2) > * {
 }
 
 body section:nth-of-type(6) div form div div:nth-of-type(6) a {
+    width: 50%;
+    max-width: 50%;
+    padding: 4px 0 4px 0;
+    justify-content: center;
     background-color: rgba(209, 213, 219, 1);
     margin-top: 3%;
 }
@@ -478,6 +482,8 @@ footer p {
 
     #myCarousel {
         width: 60%;
+        height: 100% !important;
+        padding: auto;
     }
 }
 
