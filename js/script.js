@@ -10,32 +10,66 @@ $(document).on('click', 'a[href^="#"]', function(event) {
     }, 0);
 });
 
-$(window).bind('scroll', function() {
+$(window).bind('resize', function() {
+    if ($(window).width() > 780) {
+        $('body header nav ul li').show();
+        return;
+    }
     if($(window).scrollTop() >= $('#contact').offset().top - 50) {
         $('body header nav ul li').hide();
         $('body header nav ul li:nth-of-type(6)').show();
-        console.log("contact");
     } else if($(window).scrollTop() >= $('#portfolio').offset().top - 50) {
         $('body header nav ul li').hide();
         $('body header nav ul li:nth-of-type(5)').show();
-        console.log("portfolio");
     } else if($(window).scrollTop() >= $('#formation').offset().top - 50) {
         $('body header nav ul li').hide();
         $('body header nav ul li:nth-of-type(4)').show();
-        console.log("formation");
     } else if($(window).scrollTop() >= $('#competences').offset().top - 50) {
         $('body header nav ul li').hide();
         $('body header nav ul li:nth-of-type(3)').show();
-        console.log("competences");
     } else if($(window).scrollTop() >= $('#aPropos').offset().top - 50) {
         $('body header nav ul li').hide();
         $('body header nav ul li:nth-of-type(2)').show();
-        console.log("aPropos");
     } else {
         $('body header nav ul li').hide();
         $('body header nav ul li:nth-of-type(1)').show();
-        console.log("accueil");
     }
+});
+
+$(window).bind('scroll', function() {
+    if ($(window).width() > 780) {
+        $('body header nav ul li').show();
+        return;
+    }
+    if($(window).scrollTop() >= $('#contact').offset().top - 50) {
+        $('body header nav ul li').hide();
+        $('body header nav ul li:nth-of-type(6)').show();
+    } else if($(window).scrollTop() >= $('#portfolio').offset().top - 50) {
+        $('body header nav ul li').hide();
+        $('body header nav ul li:nth-of-type(5)').show();
+    } else if($(window).scrollTop() >= $('#formation').offset().top - 50) {
+        $('body header nav ul li').hide();
+        $('body header nav ul li:nth-of-type(4)').show();
+    } else if($(window).scrollTop() >= $('#competences').offset().top - 50) {
+        $('body header nav ul li').hide();
+        $('body header nav ul li:nth-of-type(3)').show();
+    } else if($(window).scrollTop() >= $('#aPropos').offset().top - 50) {
+        $('body header nav ul li').hide();
+        $('body header nav ul li:nth-of-type(2)').show();
+    } else {
+        $('body header nav ul li').hide();
+        $('body header nav ul li:nth-of-type(1)').show();
+    }
+});
+
+
+$(document).ready(function () {
+    $('body header nav ul li a').click(function(e) {
+        if ($(window).width() < 780){
+            e.preventDefault();
+            $(this).css("background-color", "grey");
+        }
+    });
 });
     
 window.setTimeout(offsetAnchor, 0);
