@@ -28,7 +28,8 @@ a:hover {
 }
 
 progress::-webkit-progress-value {
-    background-color: grey;
+    background-color: rgb(62, 93, 207);
+    /* background-color: grey; */
     border-radius: 2px;
 }
 
@@ -47,7 +48,7 @@ header {
 
 header nav {
     width: 100%;
-    background-color: grey;
+    background-color: rgb(39, 59, 130);
 }
 
 header nav ul {
@@ -94,6 +95,10 @@ body section:first-of-type {
     align-content: center;
     margin-top: 50px;
     height: calc(100vh - 50px);
+    background-image: url(../assets/accueilbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 body section:first-of-type > * {
@@ -158,8 +163,9 @@ body section:nth-of-type(2) div div:nth-of-type(2) p {
 }
 
 body section:nth-of-type(3) {
+    color: white;
     min-height: calc(100vh - 50px);
-    background-color: rgba(209, 213, 219, 1);
+    background-color: rgb(124, 142, 207);
 }
 
 body section:nth-of-type(3) div {
@@ -332,12 +338,14 @@ body section:nth-of-type(4) h2 {
 
 body section:nth-of-type(5) {
     min-height: calc(100% - 50px);
-    background-color: rgba(209, 213, 219, 1);
+    background-color: rgb(124, 142, 207);
+    /* background-color: rgba(209, 213, 219, 1); */
     display: flex;
     flex-direction: column;
 }
 
 body section:nth-of-type(5) h2 {
+    color: white;
     font-size: 3em;
     padding-top: 1%;
     width: 100%;
@@ -633,8 +641,8 @@ footer p {
         width: 100%;
         height: 65px;
         margin: auto;
-        left: 0;
-        right: 0;
+        left: 0 !important;
+        right: 0 !important;
     }
 
     .timeline:nth-child(2) .date-outer {
