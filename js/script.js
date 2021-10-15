@@ -71,5 +71,9 @@ $(document).ready(function () {
         }
     });
 });
+
+let alertContact = () => {
+    alert("Cette fonctionnalité est en cours de développement donc n'est pas encore disponible. Merci de votre compréhension")
+}
     
 window.setTimeout(offsetAnchor, 0);
